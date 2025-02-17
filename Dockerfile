@@ -25,9 +25,8 @@ COPY ./back/package-lock.json ./
 RUN npm ci --omit=dev
 
 EXPOSE 3000
-ENV PORT=3000
 ENV STATIC_FILES_PATH=./public
-ENV IS_API_MOCK=true
-ENV AUTH_SECRET=MY_AUTH_SECRET
+ENV IS_API_MOCK=false
+ENV CORS_ORIGIN=false
 
 CMD ["node", "index"]
