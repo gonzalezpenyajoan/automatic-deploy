@@ -1,0 +1,49 @@
+{
+  "name": "tmp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p -l type-check:watch start:dev",
+    "start:dev": "vite --port 8080",
+    "build": "run-p -l type-check build:prod",
+    "build:prod": "npm run clean && vite build",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "clean": "rimraf dist"
+  },
+  "imports": {
+    "#*": [
+      "./src/*",
+      "./src/*.ts",
+      "./src/*.tsx",
+      "./src/*/index.ts",
+      "./src/*/index.tsx"
+    ]
+  },
+  "dependencies": {
+    "@emotion/css": "^11.13.0",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "axios": "^1.7.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "7.53.0",
+    "react-router-dom": "^6.26.2",
+    "react-table": "^7.8.0"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.12.0",
+    "@types/react": "^18.3.10",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-router-dom": "^5.3.3",
+    "@types/react-table": "^7.7.20",
+    "@vitejs/plugin-react": "^4.3.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^6.0.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  }
+}

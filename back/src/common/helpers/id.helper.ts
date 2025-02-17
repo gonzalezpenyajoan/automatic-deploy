@@ -1,0 +1,1 @@
+export const createId = (): string => Math.floor(Math.random() * 99999999).toString();

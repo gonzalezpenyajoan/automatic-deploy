@@ -1,0 +1,14 @@
+back/node_modules
+back/dist
+back/mongo-data
+back/public
+back/.env
+back/create-dev-env.js
+back/docker-compose.yml
+
+front/node_modules
+front/dist
+front/.editorconfig
+front/.gitignore
+front/.prettierrc
+front/.env.development
