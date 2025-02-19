@@ -1,7 +1,8 @@
 back/node_modules
 back/dist
 back/mongo-data
-back/public
+back/public/assets
+back/public/index.html
 back/.env
 back/create-dev-env.js
 back/docker-compose.yml

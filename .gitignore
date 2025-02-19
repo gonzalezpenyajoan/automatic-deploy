@@ -2,4 +2,5 @@ front/node_modules
 back/node_modules
 back/mongo-data
 back/dist
-back/public
+back/public/assets
+back/public/index.html
