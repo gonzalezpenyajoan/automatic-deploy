@@ -3,11 +3,12 @@ import { House } from "../house.model.js";
 import { getHouseContext } from "../house.context.js";
 
 export const mongoDBRepository: HouseRepository = {
-  getHouseList: async (page?: number, pageSize?: number) => {
+  getHouseList: async (page?: number, pageSize?: number, countryCode?: string) => {
     const skip = Boolean(page) ? (page - 1) * pageSize : 0;
     const limit = pageSize ?? 0;
+    const countryFilter = countryCode ? { "address.country_code" : countryCode } : {};
     return await getHouseContext()
-      .find()
+      .find(countryFilter)
       .skip(skip)
       .limit(limit)
       .toArray();
